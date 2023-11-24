@@ -1,4 +1,7 @@
+const fs = require("fs");
 
+const fileContent = fs.readFileSync("./netlify/functions/submitForm.js", "utf-8");
+console.log("File Content:", fileContent);
 const nodemailer = require("nodemailer");
 
 exports.handler = async (event, context) => {
