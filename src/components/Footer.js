@@ -10,7 +10,7 @@ const Footer = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("/.netlify/functions/submitForm", {
+      const response = await fetch("/.functions/submitForm", {
         method: "POST",
         body: JSON.stringify(formData),
       });
