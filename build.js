@@ -1,3 +1,4 @@
 const fs = require("fs");
 
-fs.writeFileSync("./netlify/functions/submitForm.js")
+const fileContent = fs.readFileSync("./netlify/functions/submitForm.js", "utf-8");
+console.log("File Content:", fileContent);
