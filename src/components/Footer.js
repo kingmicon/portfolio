@@ -1,15 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { CiLinkedin, CiMail } from "react-icons/ci"
 import { BsGithub, BsWhatsapp, BsXSquare } from "react-icons/bs"
 
 const Footer = () => {
+
+  const [formData, setFormData] = useState({ name: "", email: "", message: "",});
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("/.netlify/functions/submitForm", {
+        method: "POST",
+        body: JSON.stringify(formData),
+      });
+      const data =await response.json();
+      console.log(data.message);
+    } catch (error) {
+      console.error("Error Submitting form:", error);
+    }
+  };
+
+  const handleChange = (e) => {
+    const {name, value} = e.target;
+    setFormData((prevData) => ({...prevData, [name]: value}));
+  };
   return (
     <div className="contactme">
       <div className="contactme-form">
         <h1>
           Contact Form
         </h1>
-        <form>
+        <form onSubmit={onSubmit}>
           <div className= "form-name">
             <label>
               <span>Your name</span>
@@ -20,6 +42,7 @@ const Footer = () => {
                 className=""
                 placeholder="John cooks"
                 required
+                onChange={handleChange}
               />
           </div>
           <div className="form-email">
@@ -32,6 +55,7 @@ const Footer = () => {
                 className=""
                 placeholder="john.cooks@example.com"
                 required
+                onChange={handleChange}
               />
           </div>
           <div className="form-message">
@@ -42,6 +66,7 @@ const Footer = () => {
                 name="message"
                 className=""
                 rows="5"
+                onChange={handleChange}
               ></textarea>
           </div>
 
