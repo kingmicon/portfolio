@@ -21,10 +21,10 @@ function App () {
   //    }, 3000);
   // }
 
-  useEffect (() => {
-      window.addEventListener("load", handleLoading);
-      return () => window.removeEventListener("load", handleLoading);
-  }, [])
+  // useEffect (() => {
+  //     window.addEventListener("load", handleLoading);
+  //     return () => window.removeEventListener("load", handleLoading);
+  // }, [])
   return  (
     < >
     <div>
