@@ -6,7 +6,7 @@ import Skill from "./components/Skill";
 import Project from "./components/Project";
 import Footer from "./components/Footer";
 // import Loadingstate from './components/Loadingstate';
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 
 
 
