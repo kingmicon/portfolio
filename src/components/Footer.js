@@ -10,7 +10,7 @@ const Footer = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("/.functions/submitForm", {
+      const response = await fetch("/submitForm", {
         method: "POST",
         body: JSON.stringify(formData),
       });

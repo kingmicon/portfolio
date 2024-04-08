@@ -3,7 +3,7 @@ import useSound from "use-sound"
 import {AiFillPlayCircle, AiFillPauseCircle} from "react-icons/ai"
 import Sound from "../images/sb_adriftamonginfinitestars.mp3"
 import { IconContext } from 'react-icons/lib'
-import File from "../images/AjiriMiconUtiResume (1).pdf"
+import File from "../images/Ajiri's Resume (1).pdf"
 import Image1 from "../images/avatar.png"
 import Typewriter from 'typewriter-effect'
 import AnchorLink from "react-anchor-link-smooth-scroll";
