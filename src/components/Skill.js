@@ -37,6 +37,12 @@ const Skill = () => {
         <h1>React Js</h1>
         </div>
         <div className='skill-list1'>
+        <h1>Next Js</h1>
+        </div>
+        <div className='skill-list1'>
+        <h1>WordPress</h1>
+        </div>
+        <div className='skill-list1'>
         <h1>BootStrap</h1>
         </div>
         <div className='skill-list1'>
