@@ -9,6 +9,27 @@ body {
 header {
     margin-bottom: 15px;
 }
+.alert-popup {
+    display: block;
+    background-Color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border: 1px solid #f5c6cb;
+    border-Radius: 5px;
+    margin: 10px 0;
+}
+.alert-message p {
+    margin: 0;
+}
+.alert-actions button {
+    background-Color: #d9534f;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-Radius: 3px;
+    cursor: pointer;
+    margin: 10px 15px;
+}
 .navbar1 {
     display: flex;
     margin-bottom: 10px;
@@ -302,14 +323,14 @@ nav .nav-items {
 
   @media screen and (max-width: 400px) {
       body {
-        padding: 5px;
+        padding: 10px;
         background-color: black;
         color: antiquewhite;
     }
     .navbar1 {
         display: block;
         margin-bottom: 10px;
-        width: 40%;
+        width: 60%;
         
     }
     

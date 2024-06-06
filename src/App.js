@@ -5,44 +5,36 @@ import Aboutme from "./components/Aboutme";
 import Skill from "./components/Skill";
 import Project from "./components/Project";
 import Footer from "./components/Footer";
-// import Loadingstate from './components/Loadingstate';
-// import { useEffect, useState } from 'react';
-
-
-
+import Loadingstate from './components/Loadingstate';
+import { useEffect, useState } from 'react';
 
 function App () {
-    
-  // const [loading, setloading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
-  // const handleLoading = () => {
-  //   setTimeout (() => {
-  //   setloading(false)
-  //    }, 3000);
-  // }
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000);
 
-  // useEffect (() => {
-  //     window.addEventListener("load", handleLoading);
-  //     return () => window.removeEventListener("load", handleLoading);
-  // }, [])
-  return  (
-    < >
+    // Cleanup the timer if the component unmounts before the timer completes
+    return () => clearTimeout(timer);
+  }, []);
+
+  return !loading ? (
     <div>
-
-    <Headers/>
-    <hr></hr>
-    <Aboutme />
-    <hr></hr>
-    <Skill />
-    <hr></hr>
-    <Project />
-    <hr></hr>
-    <Footer />
+      <Headers />
+      <hr />
+      <Aboutme />
+      <hr />
+      <Skill />
+      <hr />
+      <Project />
+      <hr />
+      <Footer />
     </div>
-
-    </>
-  // ) :(<Loadingstate />)
-  )
+  ) : (
+    <Loadingstate />
+  );
 }
 
 export default App;
