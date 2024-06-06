@@ -10,7 +10,7 @@ const Footer = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5000/submitForm", {
+      const response = await fetch("POST https://kingmicon.netlify.app/submitForm 500 (Internal Server Error)", {
         method: "POST",
         headers: {
           'Content-Type': 'application/json'
